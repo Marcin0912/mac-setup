@@ -17,7 +17,7 @@ installComplete() {
 
 
 #List  of applications to install via brew
-declare -a brewApps=("zlib" "pkg-config" "git" "github/gh/gh" "gpg" "nvm" "wget" "starship" "pyenv" "zplug" "composer" "go" "php" "php@7.4")
+declare -a brewApps=("redis" "zlib" "pkg-config" "git" "github/gh/gh" "gpg" "nvm" "wget" "starship" "pyenv" "zplug" "composer" "go" "php" "php@7.4")
 
 #List of applications installed via brew cask
 declare -a brewCaskApps=("postman" "phpmon" "anaconda" "visual-studio-code-insiders" "iterm2" "figma" "flux" "font-fira-code" "google-chrome" "google-chrome-canary" "ngrok" "postman" "sketch" "slack" "visual-studio-code-insiders" "vlc")
