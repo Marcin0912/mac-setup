@@ -17,7 +17,7 @@ installComplete() {
 
 
 #List  of applications to install via brew
-declare -a brewApps=("redis" "zlib" "pkg-config" "git" "github/gh/gh" "gpg" "nvm" "wget" "starship" "pyenv" "zplug" "composer" "go" "php" "php@7.4")
+declare -a brewApps=("awscli" "terraform" "redis" "zlib" "pkg-config" "git" "github/gh/gh" "gpg" "nvm" "wget" "starship" "pyenv" "zplug" "composer" "go" "php" "php@7.4")
 
 #List of applications installed via brew cask
 declare -a brewCaskApps=("postman" "phpmon" "anaconda" "visual-studio-code-insiders" "iterm2" "figma" "flux" "font-fira-code" "google-chrome" "google-chrome-canary" "ngrok" "postman" "sketch" "slack" "visual-studio-code-insiders" "vlc")
@@ -99,7 +99,7 @@ installComplete "Finished installing global node packages." | tee -a "$logFile"
 echo "Creating .zshrc file" | tee -a "$logFile"
 touch ~/.zshrc | tee -a "$logFile"
 
-
+echo "A setup log is available at $logFile."
 
 beginInstallation " Install laravel/valet"
 composer global require laravel/valet
@@ -122,9 +122,3 @@ do
   echo "Starting $appName..." | tee -a "$logFile"
   open -a "$appName" | tee -a "$logFile"
 done
-
-echo "A setup log is available at $logFile."
-
-
-#export NVM_DIR=~/.nvm
-#source $(brew --prefix nvm)/nvm.sh
